@@ -1,3 +1,5 @@
+[![.NET](https://github.com/aimenux/UnifiedApiResponseDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/UnifiedApiResponseDemo/actions/workflows/ci.yml)
+
 # UnifiedApiResponseDemo
 ```
 Using unified api responses in web api applications

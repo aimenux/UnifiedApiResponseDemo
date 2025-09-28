@@ -68,8 +68,8 @@ public class IntegrationTests
         // arrange
         var fixture = new IntegrationTestsFactory(_testOutputHelper);
         var client = fixture.CreateClient();
-        var title = Guid.NewGuid().ToString();
-        var author = Guid.NewGuid().ToString();
+        var title = RandomString();
+        var author = RandomString();
         var request = new CreateBookRequest(title, author);
 
         // act
@@ -87,8 +87,8 @@ public class IntegrationTests
         // arrange
         var fixture = new IntegrationTestsFactory(_testOutputHelper);
         var client = fixture.CreateClient();
-        var title = Guid.NewGuid().ToString();
-        var author = Guid.NewGuid().ToString();
+        var title = RandomString();
+        var author = RandomString();
         var request = new UpdateBookRequest(title, author);
 
         // act
@@ -113,4 +113,6 @@ public class IntegrationTests
         // assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
+    
+    private static string RandomString() => $"{Guid.NewGuid()}"[..20];
 }
