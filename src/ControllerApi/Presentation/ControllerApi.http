@@ -1,0 +1,101 @@
+@baseUrl = http://localhost:5269
+@contentType = application/json
+
+#####################################
+### Request: PUT /api/v1/books/{id}
+### Summary: Update a book
+### Description: Update a book
+#####################################
+
+### Path Parameter: PutUpdateBook_id
+@PutUpdateBook_id = 1
+
+
+PUT {{baseUrl}}/api/v1/books/{{PutUpdateBook_id}}
+Content-Type: {{contentType}}
+
+{
+  "title": "title",
+  "author": "author"
+}
+
+#####################################
+### Request: GET /api/v1/books/{id}
+### Summary: Get a book
+### Description: Get a book
+#####################################
+
+### Path Parameter: GetBook_id
+@GetBook_id = 1
+
+
+GET {{baseUrl}}/api/v1/books/{{GetBook_id}}
+Content-Type: {{contentType}}
+
+
+########################################
+### Request: DELETE /api/v1/books/{id}
+### Summary: Delete a book
+### Description: Delete a book
+########################################
+
+### Path Parameter: DeleteBook_id
+@DeleteBook_id = 2
+
+
+DELETE {{baseUrl}}/api/v1/books/{{DeleteBook_id}}
+Content-Type: {{contentType}}
+
+
+#########################################
+### Request: GET /api/v1/books/search
+### Summary: Search paginated books
+### Description: Search paginated books
+#########################################
+
+### Query Parameter: GetSearchBooks_searchTerm
+@GetSearchBooks_searchTerm = 1
+
+### Query Parameter: GetSearchBooks_pageIndex
+@GetSearchBooks_pageIndex = 1
+
+### Query Parameter: GetSearchBooks_pageSize
+@GetSearchBooks_pageSize = 10
+
+
+GET {{baseUrl}}/api/v1/books/search?searchTerm={{GetSearchBooks_searchTerm}}&pageIndex={{GetSearchBooks_pageIndex}}&pageSize={{GetSearchBooks_pageSize}}
+Content-Type: {{contentType}}
+
+
+######################################
+### Request: GET /api/v1/books
+### Summary: Get paginated books
+### Description: Get paginated books
+######################################
+
+### Query Parameter: GetBooks_pageIndex
+@GetBooks_pageIndex = 1
+
+### Query Parameter: GetBooks_pageSize
+@GetBooks_pageSize = 10
+
+
+GET {{baseUrl}}/api/v1/books?pageIndex={{GetBooks_pageIndex}}&pageSize={{GetBooks_pageSize}}
+Content-Type: {{contentType}}
+
+
+#################################
+### Request: POST /api/v1/books
+### Summary: Create a book
+### Description: Create a book
+#################################
+
+
+POST {{baseUrl}}/api/v1/books
+Content-Type: {{contentType}}
+
+{
+  "title": "title",
+  "author": "author"
+}
+
