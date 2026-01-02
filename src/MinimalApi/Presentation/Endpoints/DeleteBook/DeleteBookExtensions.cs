@@ -1,6 +1,6 @@
 ﻿using Application.UseCases.Commands.DeleteBook;
 
-namespace Presentation.Controllers.DeleteBook;
+namespace Presentation.Endpoints.DeleteBook;
 
 public static class DeleteBookExtensions
 {

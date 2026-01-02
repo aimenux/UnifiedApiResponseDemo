@@ -1,3 +1,3 @@
-﻿namespace Presentation.Controllers.DeleteBook;
+﻿namespace Presentation.Endpoints.DeleteBook;
 
 public sealed record DeleteBookResponse(bool IsDeleted);
