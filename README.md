@@ -12,4 +12,4 @@ Using unified api responses in web api applications
 > :two: MinimalApi : minimal api style.
 > 
 > 
-**`Tools`** : net 9.0, ef-core, mediatr, fluent-validation, serilog
+**`Tools`** : net 10.0, ef-core, mediatr, fluent-validation, serilog
